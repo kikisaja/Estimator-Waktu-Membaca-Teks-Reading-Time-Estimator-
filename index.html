@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Time Estimator 📖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">ReadTime-Estimator</span>
+            <h1>📖 READ TIME ESTIMATOR</h1>
+            <p>Paste artikelmu di sini untuk tahu estimasi waktu bacanya!</p>
+        </header>
+
+        <!-- Mode Kecepatan Baca -->
+        <div class="speed-selector">
+            <label class="speed-label">Kecepatan Baca:</label>
+            <div class="speed-options">
+                <button class="speed-btn" data-wpm="150">🐢 Santai (150 wpm)</button>
+                <button class="speed-btn active" data-wpm="200">⚡ Normal (200 wpm)</button>
+                <button class="speed-btn" data-wpm="250">🚀 Cepat (250 wpm)</button>
+            </div>
+        </div>
+
+        <!-- Input Textarea -->
+        <div class="textarea-wrapper">
+            <textarea id="text-input" placeholder="Ketik atau tempel (paste) artikel/teks kamu di sini..."></textarea>
+            <button id="clear-btn" class="btn-clear">🗑️ Hapus Teks</button>
+        </div>
+
+        <!-- Cards Statistik & Estimasi Waktu -->
+        <div class="stats-grid">
+            
+            <!-- Card Estimasi Utama -->
+            <div class="stat-card primary-card">
+                <div class="card-icon">⏱️</div>
+                <div class="card-body">
+                    <span class="card-title">Estimasi Waktu Baca</span>
+                    <strong id="read-time-display">0 Detik</strong>
+                </div>
+            </div>
+
+            <!-- Card Rincian Kata -->
+            <div class="stat-card yellow-card">
+                <div class="card-icon">📝</div>
+                <div class="card-body">
+                    <span class="card-title">Jumlah Kata</span>
+                    <strong id="word-count-display">0</strong>
+                </div>
+            </div>
+
+            <!-- Card Rincian Karakter -->
+            <div class="stat-card pink-card">
+                <div class="card-icon">🔤</div>
+                <div class="card-body">
+                    <span class="card-title">Jumlah Karakter</span>
+                    <strong id="char-count-display">0</strong>
+                </div>
+            </div>
+
+            <!-- Card Rincian Kalimat -->
+            <div class="stat-card green-card">
+                <div class="card-icon">💬</div>
+                <div class="card-body">
+                    <span class="card-title">Jumlah Kalimat</span>
+                    <strong id="sentence-count-display">0</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
